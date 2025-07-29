@@ -1,0 +1,18 @@
+header {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #333333;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--padding-vertical) var(--padding-horizontal);
+    gap: var(--padding-horizontal);
+}
+
+.logo--header {
+    margin-right: auto;
+}

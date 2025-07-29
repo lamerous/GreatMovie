@@ -1,0 +1,103 @@
+@import 'fonts.css';
+@import 'header.css';
+@import 'footer.css';
+
+* { 
+    --padding-vertical: 50px;
+    --padding-horizontal: 80px;
+
+    /*border: 1px solid red; */
+}
+
+body {
+    background-color: #222222;
+}
+
+hr {
+    color: #808080;
+    size: 1px;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.loading {
+    color: #ffffff;
+}
+
+.main-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 18px;
+    width: 130px;
+    height: 50px;
+    color: #ffffff;
+    background-color: #A92525;
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 400px;
+    cursor: pointer;
+    transition: box-shadow 0.1s;
+}
+
+.main-button:hover {
+    box-shadow: 0 0 5px #ffffff;
+}
+
+.input {
+    width: max-content;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 18px;
+    transition: box-shadow 0.25s;
+}
+
+.input:focus-within, .input:hover { 
+    box-shadow: 0 0 15px rgba(255, 0, 0, 1);
+}
+
+.input-field {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    margin-left: 10px; 
+    font-family: "Inter", sans-serif;
+    font-size: 24px; 
+}
+
+.input-field::placeholder, seach-icon {
+    color: rgba(0, 0, 0, 0.25);
+}
+
+.search-icon {
+    width: 36px;
+    height: 36px;
+    border: none;
+    outline: none;
+    transition: box-shadow 0.25;
+}
+
+.transparent-button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    transition: text-shadow 0.1, transform 0.1;
+}
+
+.transparent-button:hover {
+    transform: scale(1.01);
+    text-shadow: 0 0 15px #a92525;
+}

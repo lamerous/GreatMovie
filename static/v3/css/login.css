@@ -1,0 +1,71 @@
+.auth-field {
+    margin: calc(var(--padding-vertical) * 2) auto;
+    display: flex;
+    flex-direction: column;
+    width: 850px;
+    height: 450px;
+    font-family: "Inter", sans-serif; 
+}
+
+.auth-header {
+    display: flex;
+    align-items: center;
+    height: 15%;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #a92525;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+}
+
+.auth-header h1 {
+    margin: 0 auto;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.auth-main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333333; 
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+}
+
+.auth-main p {
+    margin-bottom: 5px;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.auth-main form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form .main-button {
+    width: 185px;
+    margin: calc(var(--padding-vertical) / 2) 0;
+}
+
+.login-field input{
+    width: 480px;
+    height: 50px;
+}
+
+.login-semi-field {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.login-semi-field .transparent-button {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 400;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Movie Site</title>
+    </head>
+    <body>
+        <h1>Profile Page</h1> 
+
+        <div id="user-profile">
+            <div class="profile-field">
+                <span class="field-label">ID</span>
+                <span id="user-id" class="field-value"></span>
+            </div>
+            <div class="profile-field">
+                <span class="field-label">Username</span>
+                <span id="user-username" class="field-value"></span>
+            </div>
+            <div class="profile-field">
+                <span class="field-label">E-Mail</span>
+                <span id="user-email" class="field-value"></span>
+            </div>
+            <div class="profile-field">
+                <span class="field-label">Role</span>
+                <span id="user-role" class="field-value"></span>
+            </div>
+        </div>
+        
+        <div id="error-message" style="color: red; margin-top: 10px;"></div>
+
+        <a href="/movies">Watch films</a>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const xhr = new XMLHttpRequest();
+                xhr.open("GET", "/api/v1/auth/get_current_user", true);
+                xhr.withCredentials = true;
+                xhr.setRequestHeader("Content-Type", "application/json");
+
+                xhr.onload = function(){
+                    if (xhr.status >= 200 && xhr.status < 300){
+                        try{
+                            const data = JSON.parse(xhr.responseText);
+
+                            document.getElementById("user-id").textContent = data.id || "N/A";
+                            document.getElementById("user-username").textContent = data.username || "N/A";
+                            document.getElementById("user-email").textContent = data.email || "Not provided";
+                            document.getElementById("user-role").textContent = data.role || "who the f4ck r u?";
+                        }
+                        catch (e){
+                            document.getElementById("error-message").textContent = "Error parsing response";
+                        }
+                    }
+                    else if (xhr.status == 401){
+                        window.location.href = "/login";
+                    }
+                    else {
+                        try{
+                            const errorMessage = xhr.responseText ? JSON.parse(xhr.responseText) : {};
+                            document.getElementById("error-message").textContent = "Error: " + (errorMessage.detail || xhr.statusText || "Undefined error");
+                        }
+                        catch (e){
+                            document.getElementById("error-meggase").textContent = xhr.statusText;
+                        }
+                    }
+                };
+
+                xhr.onerror = function(){
+                    document.getElementById("error-message").textContent = "Server is busy. Try again later";
+                };
+
+                xhr.send();
+            });
+        </script>
+    </body>
+</html>

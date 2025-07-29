@@ -1,0 +1,45 @@
+footer {
+    padding: calc(var(--padding-vertical)/2) var(--padding-horizontal);
+    font-family: "Inter", sans-serfif;
+}
+
+footer p {
+    color: #736d6d;
+    font-size: 24px;
+    margin: 0;
+}
+
+.footer-content {
+    display: flex;
+    align-text: flex-start;
+    gap: 25%;
+}
+
+.footer-content h2 {
+    color: #ffffff;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-links { 
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.support-email {
+    color: #ffffff;
+    font-weight: 400;
+}
+
+.support-button {
+    display: block;
+    width: 75% !important;
+    margin: 25px 0;
+}
