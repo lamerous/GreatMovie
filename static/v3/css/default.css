@@ -88,13 +88,16 @@ a {
 }
 
 .transparent-button {
-    background-color: transparent;
+    /*background-color: transparent;*/
+    background: none;
     border: none;
     outline: none;
     padding: 0;
     margin: 0;
     cursor: pointer;
     transition: text-shadow 0.1, transform 0.1;
+    z-index: 2;
+    flex-shrink: 0;
 }
 
 .transparent-button:hover {

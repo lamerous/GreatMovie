@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+function login() {
     const form = document.getElementById('loginForm');
 
     if (form) {
@@ -17,12 +17,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 const result = await response.json();
                 //window.location.href = "/";
-                console.log("Ответ сервера: ", result);
+                console.log("Server response: ", result);
                 document.getElementById("error-message").textContent = result;
             } catch (error) {
                 document.getElementById("error-message").textContent = "Login error: " + error; 
-                console.error("Ошибка: ", error);
+                console.error(error);
             }
         });
     }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    login();
 });

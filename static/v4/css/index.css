@@ -1,0 +1,26 @@
+.main__inline {
+    margin: var(--main-margin-x);
+}
+
+.promo-slider {
+    width: 100%;
+    overflow: hidden;
+}
+
+.swiper-wrapper {
+    position: relative;
+}
+
+.swiper-button-prev,
+.swiper-button-next{
+    position: absolute;
+    top: 0%;
+}
+
+.swiper-button-prev::after {
+    left: 100px;
+}
+
+.swiper-button-prev::after {
+    right: 100px;
+}

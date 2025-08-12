@@ -19,7 +19,7 @@ async function fetchMovies() {
         });
 
     } catch (error) {
-        container.innerHTML = `<div class="loading">${error.message}</div>`;
+        container.innerHTML = `<div class="error-message">${error.message}</div>`;
         console.error(error);
     }
 }
@@ -33,9 +33,9 @@ function createMovieElement(movie) {
         <img class="movie-poster" src="${movie.poster}">
         <div class="movie-overlay"> 
             <div class="movie-actions">
-                <a href="favorites" class="action-btn">★</a>
-                <button class="action-btn">⌚</button>
-                <button class="action-btn">✗</button>
+                <button class="overlay-btn">★</a>
+                <button class="overlay-btn">⌚</button>
+                <button class="overlay-btn">✗</button>
             </div>
             <span class="movie-rating">${movie.rating}</span>
             <div class="movie-info">
@@ -50,5 +50,7 @@ function createMovieElement(movie) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    fetchMovies(); 
+    fetchMovies().then(() => {
+        document.dispatchEvent(new Event('moviesLoaded'));
+    }); 
 });

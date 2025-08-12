@@ -1,0 +1,32 @@
+.search {
+    display: flex;
+    align-items: center;
+
+    background-color: var(--color-dark);
+
+    border-style: solid;
+    border-width: thin;
+    border-color: var(--color-dark-gray);
+    border-radius: var(--border-radius);
+
+    flex-shrink: 0;
+}
+
+.search__input {
+    margin: 0;
+
+    background-color: transparent;
+    border: none;
+    outline: none;
+
+    font-family: inherit;
+    font-weight: 600;
+    color: var(--color-light-gray);
+}
+
+.search__button {
+    padding: 0;
+
+    border-top-right-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+}

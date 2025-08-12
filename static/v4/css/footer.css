@@ -1,0 +1,35 @@
+footer {
+    margin-inline: var(--main-margin-x);
+    margin-bottom: 100px;
+}
+
+.footer__inner {
+    display: flex;
+    align-items: flex-start;
+    gap: 25%;
+}
+
+.footer__header {
+    margin-bottom: 32px;
+}
+
+.footer__paragraph {
+    margin-bottom: 24px;
+}
+
+.footer__info {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__item { 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin-bottom: 24px;
+}
+
+.footer__support-button {
+    margin-bottom: 24px;;
+}

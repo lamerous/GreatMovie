@@ -26,20 +26,31 @@
 }
 
 .movie-list {
+    /*position: relative;*/
     display: flex;
     align-items: center;
     /*justify-content: space-between;*/
-    overflow-x: scroll;
-    min-width: 0;
-    gap: 10px;
     margin: calc(var(--padding-vertical)/2) 0 calc(var(--padding-vertical)) 0;
     padding: 0;
+}
+
+.movie-carousel {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    transition: transform 0.5 ease;
+    overflow-x: scroll;
+    scroll-snap-align: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.movie-carousel img {
+    scroll-snap-align: start;
 }
 
 .movie-container {
     position: relative;
     display: inline-block;
-    margin: 20px;
     width: 212px;
     cursor: pointer;
     border-radius: 24px;
@@ -65,7 +76,7 @@
     width: 100%;
     height: 100%;
     border-radius: 24px;
-    background: rgba(50, 50, 50, 0.5);
+    background: rgba(0, 0, 0, 0.8);
     color: white;
     opacity: 0;
     transition: 0.2s;
@@ -88,8 +99,9 @@
     gap: 10px;
 }
 
-.action-btn {
-    background: rgba(255, 255, 255, 0.2);
+.overlay-btn {
+    /*background: #a9252526;*/
+    background: none;
     border: none;
     color: white;
     width: 40px;
@@ -103,7 +115,12 @@
     font-size: 18px;
 }
 
-.action-btn:hover {
-    background: rgba(255, 255, 255, 0.4);
-    transform: scale(1.1);
+.overlay-btn:hover {
+    background: #a925250e;
+    /* transform: scale(1.1); */
+}
+
+.prev-button {
+    position: absolute;
+    left: -10px;
 }

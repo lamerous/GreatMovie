@@ -4,11 +4,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/default.css">
-        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/movies.css">
         <title>Great Movie - Лучшие фильмы</title>
     </head>
     <body>
-
         <header>
             <?php include 'templates/header.php'; ?>
         </header>
@@ -20,23 +19,34 @@
                     <button class="transparent-button"><img class="right-arrow" src="img/right-arrow.svg"></button>
                 </div>
                 <div class="movie-list">
-
-                    <a href="/movie/1" class="movie-container">
+                    <button class="transparent-button prev-button"><img src="img/navigate_prev.png"></button>
+                    <div class="movie-carousel">
+                        <img class="movie-poster" src="files/posters/bro.jpg">
+                        <img class="movie-poster" src="files/posters/jaws.jpg">
+                        <img class="movie-poster" src="files/posters/little-woman.jpg">
+                        <img class="movie-poster" src="files/posters/starwars.jpg">
                         <img class="movie-poster" src="files/posters/127hours.jpg">
-                        <div class="movie-overlay"> 
-                            <div class="movie-actions">
-                                <button class="transpant-button">★</button>
-                                <button class="action-btn">⌚</button>
-                                <button class="action-btn">✗</button>
-                            </div>
-                            <span class="movie-rating">8.7</span> 
-                        </div>
-                    </a>
-
-                    <img class="movie-poster" src="files/posters/bro.jpg">
-                    <img class="movie-poster" src="files/posters/jaws.jpg">
-                    <img class="movie-poster" src="files/posters/little-woman.jpg">
-                    <img class="movie-poster" src="files/posters/starwars.jpg">
+                        <img class="movie-poster" src="files/posters/bro.jpg">
+                        <img class="movie-poster" src="files/posters/jaws.jpg">
+                        <img class="movie-poster" src="files/posters/little-woman.jpg">
+                        <img class="movie-poster" src="files/posters/starwars.jpg">
+                        <img class="movie-poster" src="files/posters/127hours.jpg">
+                        <img class="movie-poster" src="files/posters/bro.jpg">
+                        <img class="movie-poster" src="files/posters/jaws.jpg">
+                        <img class="movie-poster" src="files/posters/little-woman.jpg">
+                        <img class="movie-poster" src="files/posters/starwars.jpg">
+                        <img class="movie-poster" src="files/posters/127hours.jpg">
+                        <img class="movie-poster" src="files/posters/bro.jpg">
+                        <img class="movie-poster" src="files/posters/jaws.jpg">
+                        <img class="movie-poster" src="files/posters/little-woman.jpg">
+                        <img class="movie-poster" src="files/posters/starwars.jpg">
+                        <img class="movie-poster" src="files/posters/127hours.jpg">
+                        <img class="movie-poster" src="files/posters/bro.jpg">
+                        <img class="movie-poster" src="files/posters/jaws.jpg">
+                        <img class="movie-poster" src="files/posters/little-woman.jpg">
+                        <img class="movie-poster" src="files/posters/starwars.jpg">
+                    </div>
+                    <button class="transparent-button next-button"><img src="img/navigate_next.svg"></button>
                 </div>
             </div>
             <hr>
@@ -45,12 +55,12 @@
                     <h1>Новинки </h1>
                     <button class="transparent-button"><img class="right-arrow" src="img/right-arrow.svg"></button>
                 </div>
-                <div id='new-movies' class="movie-list">
-                    <img class="movie-poster" src="files/posters/127hours.jpg">
-                    <img class="movie-poster" src="files/posters/bro.jpg">
-                    <img class="movie-poster" src="files/posters/jaws.jpg">
-                    <img class="movie-poster" src="files/posters/little-woman.jpg">
-                    <img class="movie-poster" src="files/posters/starwars.jpg">
+                <div class="movie-list">
+                    <button class="transparent-button prev-button"><img src="img/navigate_prev.png"></button>
+                    <div class="movie-carousel" id="new-movies">
+                        
+                    </div>
+                    <button class="transparent-button next-button"><img src="img/navigate_next.svg"></button>
                 </div>
             </div>
             <hr>
@@ -60,11 +70,13 @@
                     <button class="transparent-button"><img class="right-arrow" src="img/right-arrow.svg"></button>
                 </div>
                 <div class="movie-list">
+                    <!--
                     <img class="movie-poster" src="files/posters/127hours.jpg">
                     <img class="movie-poster" src="files/posters/bro.jpg">
                     <img class="movie-poster" src="files/posters/jaws.jpg">
                     <img class="movie-poster" src="files/posters/little-woman.jpg">
                     <img class="movie-poster" src="files/posters/starwars.jpg">
+                    -->
                 </div>
             </div>
 
@@ -76,5 +88,6 @@
         </footer>
 
         <script src="js/load_movies.js"></script>
+        <script src="js/carousel.js"></script>
     </body>
-</html>
+</html>42

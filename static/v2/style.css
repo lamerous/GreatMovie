@@ -1,0 +1,108 @@
+/** {
+    outline: 1px solid red;    
+}*/
+
+@font-face {
+    font-family: "Julee";
+    src: url('fonts/Julee-Regular.ttf');
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url('fonts/Inter-SemiBold.ttf');
+}
+
+body {
+    background-color: #222222;
+    padding-top: 180px;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    /*justify-content: space-between;*/
+    flex-direction: column;
+    align-items: center;    
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+}
+
+main {
+    margin-top: 180px;
+}
+
+.margin20-right {
+    margin-right: 20px;
+}
+
+.margin50-right {
+    margin-right: 50px;
+}
+
+.logo {
+    font-family: "Julee";
+    position: relative;
+    margin: 30px 50px;
+}
+
+.logo-layer1 {
+    font-size: 96px;
+    color: #c77575;
+}
+
+.logo-layer2 {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    font-size: 94px;
+    color: #c03232;
+}
+
+.right-header {
+    display: flex;
+    gap: 15px; 
+}
+
+.rounded-input {
+    width: 350px;
+    height: 50px;
+    background-color: #ffffff;
+    color: #000000;
+    font-family: "Inter";
+    font-size: 16px;
+    border: none;
+    border-radius: 18px;
+    opacity: 0.7;
+}
+
+.rounded-button {
+    width: 130px;
+    height: 50px;
+    background-color: #a92525;
+    color: white;
+    font-family: "Inter";
+    font-size: 16px;
+    border: none;
+    border-radius: 18px;
+    cursor: pointer;
+}
+
+.header-line {
+    width: 100%;
+    height: 1px;
+    background-color: #555;
+    border: none;
+}
+
+.film-category {
+    margin: 50px;
+    font-family: "Inter";
+    font-size: 48px;
+    color: white;
+}

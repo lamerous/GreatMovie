@@ -1,0 +1,135 @@
+@import 'avatar.css';
+@import 'search.css';
+@import 'button.css';
+
+header {
+    background-color: var(--color-dark);
+
+    border-bottom: solid var(--color-dark-gray) 1px;
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    
+    padding-inline: var(--main-margin-x);
+
+    /*height: var(--header-height);*/
+}
+
+.header__inner--left,
+.header__inner--right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.header__logo {
+    flex-shrink: 0;
+    height: 44px;
+    margin: 33px 0;
+}
+
+.header__logo-image {
+    height: 100%;
+}
+
+.header__menu-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.header__menu-link {
+    display: inline-block;
+    position: relative;
+    padding: 40px 10px;
+
+    color: var(--color-light-gray);
+    cursor: pointer;
+
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.header__menu-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 4px; /* Толще основной линии */
+    transform: translateX(-50%);
+    background: white;
+    filter: drop-shadow(var(--glow-effect));
+    opacity: 0;
+    transition: all 0.3s ease-in;
+    z-index: 0;
+}
+
+.header__menu-link::after {
+    content: '';
+    display: block;
+    position: absolute;
+    background: var(--color-gradient);
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    transform: translateX(50%);
+    transition: all 0.3s ease-in;
+}
+
+.header__menu-link:hover::after,
+.header__menu-item.active .header__menu-link::after {
+  width: 100%;
+  left: 0;
+  transform: translateX(0);
+}
+
+.header__search {
+    height: 58px;
+}
+
+.header__search-input {
+    width: 310px;
+    margin: 0px 26px 0px 20px;
+    color: var(--color-light-gray);
+}
+
+.header__search-input::placeholder {
+    color: var(--color-light-gray);
+}
+
+.header__search-button {
+    margin: 16px;
+}
+
+.header__avatar-image {
+    height: 50px;
+}
+
+@media (max-width: 1350px) {
+    .header__search {
+        display: none;
+    }
+}
+
+@media (max-width: 880px) {
+    .header__menu {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .header__inner--right {
+        display: none;
+    }
+    
+    .header__inner {
+        justify-content: center;
+    }
+}

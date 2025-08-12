@@ -1,0 +1,25 @@
+.button {
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    height: 58px;
+    text-decoration: none;
+}
+
+.button--transparent {
+    background-color: transparent;
+}
+
+.button--main {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-main);
+    color: var(--color-light);
+    padding: 16px 20px;
+    transition: box-shadow 0.1s;
+}
+
+.button--main:hover {
+    box-shadow: 0 0 5px #ffffff;
+}

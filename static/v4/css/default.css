@@ -1,0 +1,52 @@
+@import 'normalize.css';
+@import 'fonts.css';
+@import 'header.css';
+@import 'footer.css';
+@import 'tabbar.css';
+
+:root {
+    --color-header: #000000;
+    --color-dark: #1e1e1e;
+    --color-light: #ffffff;
+    --color-main: #a92525;
+    --color-main-opct: #a92525aa;
+    --color-light-gray: #c0c0c0;
+    --color-dark-gray: #736d6d;
+    --color-gradient: linear-gradient(to right, var(--color-main), rgba(200, 128, 128), var(--color-main));
+
+    --main-margin-x: 60px;
+
+    --border-radius: 16px;
+
+    --font-family-base: 'Montserrat', sans-serif;
+
+    --transition-duration: 0.2s;
+}
+
+body {
+    font-family: var(--font-family-base);
+    font-size: 20px;
+
+    color: var(--color-dark-gray);
+    background-color: var(--color-dark);
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    display: inline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-light);
+    font-size: 40px;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 20px;
+}

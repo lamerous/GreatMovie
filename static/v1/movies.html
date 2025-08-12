@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Movie Site</title>
+    </head>
+    <body>
+        <h1>Movie List</h1>
+        <div id="movies-list">
+            <p>Loading movies...</p>
+        </div>
+
+        <div id="error-message" style="color: red; margin-top: 10px;"></div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function(){
+                const xhr = new XMLHttpRequest();
+                xhr.open("GET", "/api/v1/movies", true);
+                xhr.withCredentials = true;
+                xhr.setRequestHeader("Content-Type", "application/json");
+                xhr.onload = function(){
+                    if (xhr.status >= 200 && xhr.status < 300){
+                        try{
+                            const movies = JSON.parse(xhr.responseText);
+                       
+                            document.getElementById("movies-list").innerHTML = movies.map(movie => `
+                                <div class='movie'>
+                                    <p>${movie.name}</p>
+                                </div>
+                            `).join("");
+                            
+                        }
+                        catch (e){
+                            document.getElementById("error-message").textContent = "Error parsing movies";
+                        }
+                    }
+                    else{
+                        try{
+                            const errorMessage = xhr.responseText ? JSON.parse(xhr.responseText) : {};
+                            document.getElementById("error-message").textContent = "Error " + (errorMessage.detail || xhr.statusText || "Undefined error");
+                        }
+                        catch (e){
+                            document.getElementById("error-message").textContent = xhr.statusText;
+                        }
+                    }
+                }
+                xhr.onerror = function(){
+                    document.getElementById("error-message").textContent = "Server is busy. Try again later.";
+                }
+                xhr.send();
+            });
+        </script>
+    </body>
+</html>
